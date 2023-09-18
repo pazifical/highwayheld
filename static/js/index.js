@@ -70,3 +70,4 @@ for (let i = 0; i < 4; i++) {
     articles.forEach(article => articlePreviews.appendChild(createArticleDiv(article)));
 
 }
+

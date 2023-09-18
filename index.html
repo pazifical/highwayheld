@@ -12,12 +12,23 @@
 <body>
     <div class="nav-row">
         <nav>
-            <h1 style="font-size: 3rem; font-family: 'Brush Script MT', cursive;">Highway-Held</h1>
-            <a href="/" style="margin-left: auto;">Über mich</a>
-            <a href="/" style="text-decoration: underline var(--color1);">Gadgets</a>
-            <a href="/" style="text-decoration: underline  var(--color2) ;">Zubehör</a>
-            <a href="/" style="text-decoration: underline var(--color3);">Wartung</a>
-            <a href="/" style="text-decoration: underline var(--color4);">Pflege</a>
+            <h1 style="font-size: 2.5rem; font-family: 'Brush Script MT', cursive;">
+                Highway-Held
+            </h1>
+
+            <svg id="burger" onclick="toggleBurger()" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16" style="margin-left: auto;margin-right: 0;">
+                <path fill-rule="evenodd"
+                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+
+            <div id="nav-items">
+                <a href="/" class="nav-link">Über mich</a>
+                <a href="/" class="nav-link" style="text-decoration: underline var(--color1);">Gadgets</a>
+                <a href="/" class="nav-link" style="text-decoration: underline  var(--color2) ;">Zubehör</a>
+                <a href="/" class="nav-link" style="text-decoration: underline var(--color3);">Wartung</a>
+                <a href="/" class="nav-link" style="text-decoration: underline var(--color4);">Pflege</a>
+            </div>
         </nav>
     </div>
     <main>
@@ -32,6 +43,16 @@
         </section>
     </main>
     <script src="static/js/index.js"></script>
+    <script>
+        function toggleBurger() {
+            const x = document.getElementById("nav-items");
+            if (x.style.display === "grid") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "grid";
+            }
+        }
+    </script>
 </body>
 
 </html>
